@@ -1,0 +1,38 @@
+```
+ghost-ai-mvp/
+├── frontend/
+│   ├── pages/
+│   │   ├── index.js               # Landing page (converted from index.html)
+│   │   ├── signup.js             # Signup form page with Tally.so integration
+│   │   ├── dashboard.js          # User dashboard for Ghost interaction
+│   ├── components/
+│   │   ├── Nav.js                # Navigation bar component
+│   │   ├── Hero.js               # Hero section component
+│   │   ├── Pricing.js            # Pricing section component
+│   │   ├── QuoteSection.js       # Emotional quote section
+│   │   ├── HowItWorks.js         # How It Works section
+│   │   ├── FAQ.js                # FAQ accordion section
+│   │   ├── Footer.js             # Footer component
+│   ├── styles/
+│   │   ├── globals.css           # Tailwind CSS and custom styles
+│   ├── public/
+│   │   ├── favicon.ico           # Site favicon
+│   ├── next.config.js            # Next.js configuration
+│   ├── package.json              # Frontend dependencies
+│   ├── .env.local                # Frontend environment variables
+├── backend/
+│   ├── routes/
+│   │   ├── upload.js             # API for file uploads
+│   │   ├── train.js              # API for Ghost training
+│   │   ├── chat.js               # API for Ghost chat
+│   ├── services/
+│   │   ├── supabase.js           # Supabase storage/auth integration
+│   │   ├── openrouter.js         # OpenRouter LLM integration
+│   │   ├── chromadb.js           # ChromaDB memory storage
+│   │   ├── playht.js             # PlayHT TTS integration
+│   ├── server.js                 # Express server
+│   ├── package.json              # Backend dependencies
+│   ├── .env                      # Backend environment variables
+├── README.md                     # Project setup instructions
+├── .gitignore                    # Git ignore file
+```

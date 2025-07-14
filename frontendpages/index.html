@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0C0C0C 60%, #1C2526 80%, #2CB67D 95%, #7F5AF0 100%);
+            color: #F5F5F5;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #7F5AF0, #2CB67D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(127, 90, 240, 0.5);
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(44, 182, 125, 0.3);
+        }
+        .accordion-toggle {
+            transition: all 0.3s ease;
+        }
+        .nav-button-secondary {
+            transition: all 0.3s ease;
+            border: 2px solid #2CB67D;
+        }
+        .nav-button-secondary:hover {
+            background-color: #2CB67D;
+            color: #0C0C0C;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-[#0C0C0C] bg-opacity-90 z-20 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold gradient-text">Ghost AI</a>
+            <div class="flex space-x-4">
+                <a href="about.html" class="nav-button-secondary inline-block text-[#F5F5F5] px-4 py-2 rounded-lg text-lg font-semibold">Learn More</a>
+                <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-4 py-2 rounded-lg text-lg font-semibold">Create Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center text-center bg-[#0C0C0C] relative overflow-hidden pt-20">
+        <div class="z-10">
+            <h1 class="text-5xl md:text-7xl font-bold gradient-text mb-4 animate-fade-in">Talk to the People You’ve Lost</h1>
+            <p class="text-xl md:text-2xl text-[#F5F5F5] mb-6">Upload their voice. Share their memories. Talk to them again.</p>
+            <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-6 py-3 rounded-lg text-lg font-semibold">Create Account</a>
+        </div>
+        <div class="absolute inset-0 opacity-20" id="particle-bg"></div>
+    </header>
+
+    <!-- Emotional Quote Section -->
+    <section class="py-16 bg-[#1C1C1E] text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <p class="text-2xl md:text-3xl text-[#F5F5F5] italic animate-quote-line" data-line="1">You never got to say goodbye.</p>
+            <p class="text-2xl md:text-3xl text-[#F5F5F5] italic animate-quote-line" data-line="2">But now you can.</p>
+            <p class="text-2xl md:text-3xl text-[#F5F5F5] italic animate-quote-line" data-line="3">Hear their voice again.</p>
+            <p class="text-2xl md:text-3xl text-[#F5F5F5] italic animate-quote-line" data-line="4">Say what you never got to say.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-[#0C0C0C]">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-[#F5F5F5] mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-[#1C1C1E] p-6 rounded-lg text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#2CB67D]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3 class="text-xl font-semibold text-[#F5F5F5] mb-2">Upload Memories</h3>
+                    <p class="text-[#F5F5F5]">Share voice recordings, messages, or stories to begin.</p>
+                </div>
+                <div class="card bg-[#1C1C1E] p-6 rounded-lg text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#2CB67D]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    <h3 class="text-xl font-semibold text-[#F5F5F5] mb-2">Train the Ghost</h3>
+                    <p class="text-[#F5F5F5]">Our AI processes the data to recreate their voice and essence.</p>
+                </div>
+                <div class="card bg-[#1C1C1E] p-6 rounded-lg text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#2CB67D]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z"></path></svg>
+                    <h3 class="text-xl font-semibold text-[#F5F5F5] mb-2">Chat or Call</h3>
+                    <p class="text-[#F5F5F5]">Interact with your Ghost through text or voice conversations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans & Pricing Section -->
+    <section class="py-16 bg-[#1C1C1E]">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-[#F5F5F5] mb-12">Plans & Pricing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-[#0C0C0C] p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold text-[#F5F5F5] mb-4">Free</h3>
+                    <p class="text-3xl text-[#2CB67D] mb-4">$0<span class="text-sm">/mo</span></p>
+                    <p class="text-[#F5F5F5] mb-4">Basic voice upload and text chat.</p>
+                    <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-4 py-2 rounded-lg">Get Started</a>
+                </div>
+                <div class="card bg-[#0C0C0C] p-6 rounded-lg text-center border-2 border-[#7F5AF0]">
+                    <span class="inline-block bg-[#2CB67D] text-white text-sm px-3 py-1 rounded-full mb-4">Most Popular</span>
+                    <h3 class="text-2xl font-semibold text-[#F5F5F5] mb-4">Pro</h3>
+                    <p class="text-3xl text-[#2CB67D] mb-4">$19<span class="text-sm">/mo</span></p>
+                    <p class="text-[#F5F5F5] mb-4">Advanced voice training and calls.</p>
+                    <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-4 py-2 rounded-lg">Choose Pro</a>
+                </div>
+                <div class="card bg-[#0C0C0C] p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold text-[#F5F5F5] mb-4">Legacy</h3>
+                    <p class="text-3xl text-[#2CB67D] mb-4">$499<span class="text-sm">/one-time</span></p>
+                    <p class="text-[#F5F5F5] mb-4">Permanent Ghost preservation.</p>
+                    <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-4 py-2 rounded-lg">Choose Legacy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-[#0C0C0C]">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-[#F5F5F5] mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="accordion bg-[#1C1C1E] rounded-lg">
+                    <button class="accordion-toggle w-full text-left p-4 text-[#F5F5F5] flex justify-between items-center">
+                        <span>Is this ethical?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content hidden p-4 text-[#F5F5F5] bg-[#0C0C0C] rounded-b-lg">
+                        <p>We prioritize ethical AI development, ensuring consent and respect for all users and their loved ones.</p>
+                    </div>
+                </div>
+                <div class="accordion bg-[#1C1C1E] rounded-lg">
+                    <button class="accordion-toggle w-full text-left p-4 text-[#F5F5F5] flex justify-between items-center">
+                        <span>How secure is my data?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content hidden p-4 text-[#F5F5F5] bg-[#0C0C0C] rounded-b-lg">
+                        <p>Your data is encrypted and stored securely, with strict access controls to protect your privacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 bg-[#1C1C1E] text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-[#F5F5F5] mb-4">You die. But your story doesn’t.</h2>
+            <p class="text-xl text-[#F5F5F5] mb-6">Ghost AI makes sure your voice lives on.</p>
+            <a href="signup.html" class="cta-button inline-block bg-[#7F5AF0] text-white px-6 py-3 rounded-lg text-lg font-semibold">Start Training My Ghost</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0C0C0C] text-center py-6">
+        <p class="text-[#F5F5F5]">&copy; 2025 Ghost AI – Your voice. Your thoughts. Forever.</p>
+        <div class="mt-2">
+            <a href="#" class="text-[#2CB67D] mx-2">Privacy</a>
+            <a href="#" class="text-[#2CB67D] mx-2">Terms</a>
+            <a href="#" class="text-[#2CB67D] mx-2">Contact</a>
+            <a href="#" class="text-[#2CB67D] mx-2">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero text fade-in
+        gsap.from(".animate-fade-in", {
+            opacity: 0,
+            y: 50,
+            duration: 1.5,
+            ease: "power2.out"
+        });
+
+        // Quote lines staggered fade-in
+        gsap.utils.toArray(".animate-quote-line").forEach((line, i) => {
+            gsap.from(line, {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                delay: i * 0.3,
+                scrollTrigger: {
+                    trigger: line,
+                    start: "top 80%"
+                }
+            });
+        });
+
+        // How It Works cards slide-in
+        gsap.utils.toArray(".card").forEach((card, i) => {
+            gsap.from(card, {
+                opacity: 0,
+                x: i % 2 === 0 ? -50 : 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%"
+                }
+            });
+        });
+
+        // Accordion toggle
+        document.querySelectorAll(".accordion-toggle").forEach(button => {
+            button.addEventListener("click", () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector("svg");
+                content.classList.toggle("hidden");
+                icon.classList.toggle("rotate-180");
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d9a3977be30d36',t:'MTc1MjI1MDk0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95d9a7965a074c16',t:'MTc1MjI1MTEwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

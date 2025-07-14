@@ -1,0 +1,32 @@
+{
+    "title": "Ghost AI Onboarding Form",
+    "fields": [
+      {
+        "type": "email",
+        "label": "Your Email",
+        "required": true
+      },
+      {
+        "type": "file",
+        "label": "Upload Voice Clips",
+        "required": false,
+        "accept": "audio/*"
+      },
+      {
+        "type": "textarea",
+        "label": "Share Memories or Stories",
+        "required": false
+      },
+      {
+        "type": "text",
+        "label": "Favorite Hobby of the Ghost",
+        "required": false
+      },
+      {
+        "type": "text",
+        "label": "Personality Traits (e.g., kind, witty)",
+        "required": false
+      }
+    ],
+    "webhook": "https://your-backend-url/api/upload"
+  }

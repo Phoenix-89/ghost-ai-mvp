@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #0C0C0C 60%, #1C2526 80%, #2CB67D 95%, #7F5AF0 100%);
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+.gradient-text {
+  background: linear-gradient(to right, #7F5AF0, #2CB67D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cta-button {
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(127, 90, 240, 0.5);
+}
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(44, 182, 125, 0.3);
+}
+.nav-button-secondary {
+  transition: all 0.3s ease;
+  border: 2px solid #2CB67D;
+}
+.nav-button-secondary:hover {
+  background-color: #2CB67D;
+  color: #0C0C0C;
+  transform: scale(1.05);
+}

@@ -1,6 +1,6 @@
 export default function Nav() {
     return (
-      <nav className="fixed top-0 w-full bg-[#0C0C0C] bg-opacity-90 z-20 py-4">
+      <nav className=" relative top-0 w-full bg-[#0C0C0C] bg-opacity-90 z-20 py-4">
         <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
           <a href="/" className="text-2xl font-bold gradient-text">Ghost AI</a>
           <div className="flex space-x-4">
